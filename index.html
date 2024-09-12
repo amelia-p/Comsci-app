@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <link href="home.css" rel="stylesheet" type="text/css"/>
-<script src="home.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +9,18 @@
 <body>
     <div id="header">Study Planner</div>
     <div id="choose">Choose a Course:</div>
-    <form action="" class="courseselect">
-    <select id="courses">
-        <option value="physics">AP Physics 1</option>
-        <option value="compsci">AP Computer Science</option>
-      </select>
-    <input type="submit" value="Submit">
+    <form action="" id="loginForm">
+        <select id="courses">
+            <option value="physics">AP Physics 1</option>
+            <option value="compsci">AP Computer Science</option>
+        </select>
+        <button type="submit" class="button">Submit</button>
     </form>
+    
+    <div id="physicsChoice" style="display: none;">You chose physics!</div>
+    <div id="compsciChoice" style="display: none;">You chose compsci!</div>
+
+    <script src="home.js"></script>
+    
 </body>
 </html>
