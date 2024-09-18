@@ -12,13 +12,22 @@
     <form action="" id="loginForm">
         <select id="courses">
             <option value="physics">AP Physics 1</option>
-            <option value="compsci">AP Computer Science</option>
+            <option value="comsci">AP Computer Science</option>
         </select>
         <button type="submit" class="button">Submit</button>
     </form>
     
-    <div id="physicsChoice" style="display: none;">You chose physics!</div>
-    <div id="compsciChoice" style="display: none;">You chose compsci!</div>
+    <div id="draggableElements">
+        <div id="csUnits" style="display: none;">
+            <div id="csUnits1" class="draggable">CS Unit 1</div>
+            <div id="csUnits2" class="draggable">CS Unit 2</div>
+        </div>
+    
+        <div id="physicsUnits" style="display: none;">
+            <div id="physicsUnits1" class="draggable">Physics Unit 1</div>
+            <div id="physicsUnits2" class="draggable">Physics Unit 2</div>
+        </div>
+    </div>
 
     <script src="home.js"></script>
     

@@ -42,3 +42,25 @@ body {
     background-color: black; 
     color: white;
   }
+
+#csUnits, #physicsUnits {
+    width: 100px;
+    padding: 10px;
+    position: relative;
+}
+
+#csUnits1, #csUnits2 {
+    background-color: lightblue; 
+    width: 100px;
+    padding: 10px;
+    position: absolute; 
+    cursor: pointer;
+}
+
+#physicsUnits1, #physicsUnits2 {
+    background-color: lightgreen; 
+    width: 100px;
+    padding: 10px;
+    position: absolute; 
+    cursor: pointer;
+}
