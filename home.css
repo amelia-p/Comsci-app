@@ -49,7 +49,7 @@ body {
     position: relative;
 }
 
-#csUnits1, #csUnits2 {
+#csUnits1, #csUnits2, #csUnits3, #csUnits4, #csUnits5, #csUnits6, #csUnits7, #csUnits8, #csUnits9, #csUnits10 {
     background-color: lightblue; 
     width: 100px;
     padding: 10px;
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-#physicsUnits1, #physicsUnits2 {
+#physicsUnits1, #physicsUnits2, #physicsUnits3, #physicsUnits4, #physicsUnits5, #physicsUnits6, #physicsUnits7, #physicsUnits8 {
     background-color: lightgreen; 
     width: 100px;
     padding: 10px;
