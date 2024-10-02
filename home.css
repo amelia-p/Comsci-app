@@ -81,7 +81,7 @@ body {
     cursor: pointer;
 }
 
-#physicsUnits1, #physicsUnits2 {
+#physicsUnits1, #physicsUnits2, #physicsUnits3, #physicsUnits4, #physicsUnits5, #physicsUnits6, #physicsUnits7, #physicsUnits8 {
     background-color: lightgreen;
     padding: 10px;
     cursor: pointer;
