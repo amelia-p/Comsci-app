@@ -43,24 +43,47 @@ body {
     color: white;
   }
 
-#csUnits, #physicsUnits {
-    width: 100px;
+.dropzone {
+    width: 200px;
+    gap: 10px;
+    height: auto; /* Allow height to adjust as items are added */
+    min-height: 200px; 
+    background-color: #f2f2f2;
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column; /* Ensure items inside stack vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
     padding: 10px;
+}
+
+
+#csUnits, #physicsUnits {
+    padding: 10px;
+    width: 220px;
     position: relative;
 }
 
-#csUnits1, #csUnits2 {
-    background-color: lightblue; 
-    width: 100px;
+#courseContainer {
+    display: flex; /* Flexbox on the parent container to align units and drop zones horizontally */
+    gap: 20px; /* Space between the units and the drop zone */
+    padding: 20px;
+}
+
+#csUnits, #physicsUnits {
+    display: flex; /* Aligns the units horizontally */
+    flex-direction: column; /* Makes units appear in a vertical column */
+}
+
+#csUnits1, #csUnits2, #csUnits3, #csUnits4, #csUnits5, #csUnits6, #csUnits7, #csUnits8, #csUnits9, #csUnits10 {
+    background-color: lightblue;
     padding: 10px;
-    position: absolute; 
     cursor: pointer;
 }
 
 #physicsUnits1, #physicsUnits2 {
-    background-color: lightgreen; 
-    width: 100px;
+    background-color: lightgreen;
     padding: 10px;
-    position: absolute; 
     cursor: pointer;
 }
+

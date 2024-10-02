@@ -2,56 +2,76 @@ function showCourses() {
     let loginForm = document.getElementById("loginForm");
     let physicsChoice = document.getElementById("physicsUnits");
     let comsciChoice = document.getElementById("csUnits");
-    
+    let physicsDropZone = document.getElementById("physicsDropZone");
+    let comsciDropZone = document.getElementById("comsciDropZone");
+    let courseContainer = document.getElementById("courseContainer");
+
     loginForm.addEventListener("submit", (e) => {
-        e.preventDefault();  
-        
+        e.preventDefault();
+
         let selectedCourse = document.getElementById("courses").value;
-        
+
+        // Hide all units and drop zones initially
         physicsChoice.style.display = "none";
         comsciChoice.style.display = "none";
-        
+        physicsDropZone.style.display = "none";
+        comsciDropZone.style.display = "none";
+        courseContainer.style.display = "none";
+
+        // Show the selected units and their corresponding drop zone
+        courseContainer.style.display = "flex";
         if (selectedCourse === "physics") {
-            physicsChoice.style.display = "block";
-            makeDraggable("physicsUnits");
+            physicsChoice.style.display = "flex";
+            physicsDropZone.style.display = "flex";
         } else if (selectedCourse === "comsci") {
-            comsciChoice.style.display = "block";
-            makeDraggable("csUnits");
+            comsciChoice.style.display = "flex";
+            comsciDropZone.style.display = "flex";
         }
     });
 }
 
-function makeDraggable(parentId) {
-    let parent = document.getElementById(parentId);
-    let children = parent.getElementsByClassName('draggable');
-    for (let i = 0; i < children.length; i++) {
-        dragElement(children[i]);
-    }
+let unitOrder = [];
+
+function allowDrop(ev) {
+    ev.preventDefault();
 }
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = function(e) {
-      e.preventDefault();
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.onmousemove = elementDrag;
-    };
-  
-    function elementDrag(e) {
-      e.preventDefault();
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var element = document.getElementById(data);
+    
+    // Add the element to the drop zone
+    ev.target.appendChild(element);
+    element.style.width = "90%";
+    
+    // Update the order of units
+    updateUnitOrder(ev.target);
+}
+
+function updateUnitOrder(dropZone) {
+    unitOrder = []; // Reset the array
+    let elements = dropZone.children;
+    for (let i = 0; i < elements.length; i++) {
+        unitOrder.push(elements[i].id); // Store the id of each unit in order
     }
-  
-    function closeDragElement() {
-      document.onmouseup = null;
-      document.onmousemove = null;
+    console.log("Current unit order:", unitOrder);
+}
+
+function loadStoredOrder(dropZone) {
+    const storedOrder = JSON.parse(localStorage.getItem("unitOrder"));
+    if (storedOrder) {
+        for (const unitId of storedOrder) {
+            let unitElement = document.getElementById(unitId);
+            if (unitElement) {
+                dropZone.appendChild(unitElement); // Recreate the order from storage
+            }
+        }
+        unitOrder = storedOrder;
     }
 }
 
