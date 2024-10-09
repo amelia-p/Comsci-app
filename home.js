@@ -5,6 +5,7 @@ function showCourses() {
     let physicsDropZone = document.getElementById("physicsDropZone");
     let comsciDropZone = document.getElementById("comsciDropZone");
     let courseContainer = document.getElementById("courseContainer");
+    let submit = document.getElementById("submit");
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -23,9 +24,12 @@ function showCourses() {
         if (selectedCourse === "physics") {
             physicsChoice.style.display = "flex";
             physicsDropZone.style.display = "flex";
+            submit.style.display = "block";
+            
         } else if (selectedCourse === "comsci") {
             comsciChoice.style.display = "flex";
             comsciDropZone.style.display = "flex";
+            submit.style.display = "block";
         }
     });
 }

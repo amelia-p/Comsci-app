@@ -47,7 +47,7 @@ body {
     width: 200px;
     gap: 10px;
     height: auto; /* Allow height to adjust as items are added */
-    min-height: 200px; 
+    min-height: 300px; 
     background-color: #f2f2f2;
     border: 2px dashed #ccc;
     display: flex;
@@ -86,4 +86,3 @@ body {
     padding: 10px;
     cursor: pointer;
 }
-
