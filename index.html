@@ -17,6 +17,10 @@
         <button type="submit" class="button">Submit</button>
     </form>
     
+    <div id="courseExplain">Rank each unit from most familiar to least familiar - first unit being most comfortable,
+        last unit being least comfortable.
+    </div>
+
     <div id="courseContainer" style="display: none;">
         <div id="csUnits" style="display: none;">
             <div id="csUnits1" draggable="true" ondragstart="drag(event)">Unit 1: Primitive Data Types</div>
@@ -48,9 +52,15 @@
         </div>
     </div>   
 
+    <div id="daysInput" style="display: none">
+    <span>How many days do you need to study this topic?</span>
+    <input type="text" style="width: 50px">
+    </div>
 
     <form action="calendar.html" id="calendarSubmit">
-        <button type="submit" class="button" style="display: none; margin-left: 30px">Submit</button>
+        <input type="hidden" id="unitOrderInput" name="unitOrder"> 
+        <input type="hidden" id="daysValue" name="daysValue">
+        <button type="submit" class="button" style="display: none; margin-left: 30px; margin-bottom: 20px">Submit</button>
     </form>
 
     <script src="home.js"></script>

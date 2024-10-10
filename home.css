@@ -17,6 +17,14 @@ body {
     margin-bottom: 5px;
 }
 
+#courseExplain {
+    display: none;
+    margin-left: 30px;
+    font-family: Georgia;
+    margin-top: 20px;
+    text-align: center;
+}
+
 #loginForm {
     margin: 0 auto; 
     margin-top: 15px;
@@ -44,17 +52,31 @@ body {
   }
 
 .dropzone {
-    width: 200px;
-    gap: 10px;
-    height: auto; /* Allow height to adjust as items are added */
-    min-height: 300px; 
+    width: 300px;
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    gap: 10px; /* Add space between the items */
+    min-height: 400px;
     background-color: #f2f2f2;
     border: 2px dashed #ccc;
-    display: flex;
-    flex-direction: column; /* Ensure items inside stack vertically */
-    align-items: center;
-    justify-content: flex-start; /* Align items to the top */
+    padding: 15px 10px 50px 10px;
+    box-sizing: border-box;  /* Ensure padding is included in the total width and height */
+    transition: all 0.2s ease; 
+}
+
+.dropped-item {
+    width: 100%; /* Ensure full width */
+    background-color: lightblue;
     padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+
+#daysInput {
+    margin-left: 30px;
+    font-family: Georgia;
+    margin-bottom: 10px;
 }
 
 
