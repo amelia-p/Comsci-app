@@ -5,7 +5,7 @@ function showCourses() {
     let physicsDropZone = document.getElementById("physicsDropZone");
     let comsciDropZone = document.getElementById("comsciDropZone");
     let courseContainer = document.getElementById("courseContainer");
-    let submit = document.getElementById("submit");
+    let submitButton = document.querySelector("#calendarSubmit button");
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -18,18 +18,19 @@ function showCourses() {
         physicsDropZone.style.display = "none";
         comsciDropZone.style.display = "none";
         courseContainer.style.display = "none";
+        
 
         // Show the selected units and their corresponding drop zone
         courseContainer.style.display = "flex";
         if (selectedCourse === "physics") {
             physicsChoice.style.display = "flex";
             physicsDropZone.style.display = "flex";
-            submit.style.display = "block";
+            submitButton.style.display = "block";
             
         } else if (selectedCourse === "comsci") {
             comsciChoice.style.display = "flex";
             comsciDropZone.style.display = "flex";
-            submit.style.display = "block";
+            submitButton.style.display = "block";
         }
     });
 }
