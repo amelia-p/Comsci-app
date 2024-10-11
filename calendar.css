@@ -75,14 +75,28 @@ header .current-date{
  cursor: default;
 }
 .calendar .days li{
+    color: red;
  z-index: 1;
  cursor: pointer;
- position: relative;
+ position: relative; 
  margin-top: 50px ;
- /*margin for spacing between each week*/
+ /* margin for spacing between each week*/
  margin-bottom: 50px;
  margin-left: 0px;
 }
+.calendar .days1 li>{
+    color: blue;
+    z-index: 1;
+    cursor: pointer;
+    position: relative; 
+    margin-top: 50px ;
+    /* margin for spacing between each week */
+    margin-bottom: 50px;
+    margin-left: 0px;
+   }
+   
+   
+
 .days .inactive{
  color: #aaa;
 }
@@ -90,7 +104,8 @@ header .current-date{
  color: #fff;
 }
 .days li::before{
- position: absolute;
+    color: green;
+ position:  absolute;
  content: "";
  left: 50%;
  top: 50%;
@@ -103,6 +118,7 @@ header .current-date{
 .days li.active::before{
  background: #9B59B6;
 }
-.days li:not(.active):hover::before{
- background: #f2f2f2;
+/* .days li:not(.active):hover::before{
+  background: #f2f2f2; 
 }
+  */
