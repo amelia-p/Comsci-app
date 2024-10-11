@@ -18,18 +18,15 @@ const renderCalendar = () => {
  let studyTag="";
  for (let i = firstDayofMonth; i > 0; i--) { // creating li of previous month last days
  liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
- studyTag += `<li> class = "Study for 4 hours" </li>`;
  }
  for (let i = 1; i <= lastDateofMonth; i++) { // creating li of all days of current month
  // adding active class to li if the current day, month, and year matched
  let isToday = i === date.getDate() && currMonth === new Date().getMonth()
  && currYear === new Date().getFullYear() ? "active" : "";
- liTag += `<li class="${isToday}">${i}</li>`;
- studyTag += `<li> class = "Study for 4 hours" </li>`;
+ liTag += `<li class="${isToday}">${i}<br>${"Study for 4 Hours"}</li>`;
  }
  for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
  liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
- studyTag += `<li> class = "Study for 4 hours" </li>`;
  }
  currentDate.innerText = `${months[currMonth]} ${currYear}`; // passing current mon and yr as currentDate text
  
