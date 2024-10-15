@@ -1,3 +1,5 @@
+let daysInputValue = document.getElementById("none");
+
 function showCourses() {
     let loginForm = document.getElementById("loginForm");
     let explanation = document.getElementById("courseExplain");
@@ -10,7 +12,7 @@ function showCourses() {
     let submitButton = document.getElementById("calendarSubmit");
 
 
-    daysInputValue = document.getElementById("none");
+    
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -72,9 +74,11 @@ function showCourses() {
         localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
         localStorage.setItem("days", daysInputValue);  // Store the days input
     
-        // Redirect to the calendar.html page
-        window.location.href = `calendar.html`;
         console.log("Unit order at submission:", unitOrder);
+
+        // Redirect to the calendar.html page
+        //window.location.href = `calendar.html`;
+        
 
         
     });
