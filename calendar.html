@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - youtube.com/codingnepal -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -14,10 +13,20 @@
   <body>
     <div class="wrapper">
       <header>
+        <div id="header">Your Study Calendar</div>
+        <div id="unitOrderDisplay"></div>
+        <div id="daysDisplay"></div>
         <p class="current-date"></p>
-        <p id="current-date"></p>
 
     <script>
+        const unitOrder = JSON.parse(localStorage.getItem('unitOrder'));
+        const days = localStorage.getItem('days');
+
+        // Clear the data from localStorage (optional)
+        localStorage.removeItem('unitOrder');
+        localStorage.removeItem('days');
+
+
         document.getElementById("current-date").innerHTML = new Date().getDate();
         //getDay() returns the day of the week as a number (0-6)
         //getDate() returns the day of the month as a number (1-31)
