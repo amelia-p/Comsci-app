@@ -3,6 +3,8 @@ const studyhours = document.querySelector(".days1"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
 // getting new date, current year and month
+console.log("hours Per Unit array:", hoursPerUnit);
+
 let date = new Date(),
 currYear = date.getFullYear(),
 currMonth = date.getMonth();
