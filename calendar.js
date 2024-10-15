@@ -2,6 +2,8 @@ const daysTag = document.querySelector(".days");
 const studyhours = document.querySelector(".days1"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
+
+
 // getting new date, current year and month
 let date = new Date(),
 currYear = date.getFullYear(),
@@ -23,7 +25,7 @@ const renderCalendar = () => {
  // adding active class to li if the current day, month, and year matched
  let isToday = i === date.getDate() && currMonth === new Date().getMonth()
  && currYear === new Date().getFullYear() ? "active" : "";
- liTag += `<li class="${isToday}">${i}<br>${"Study for 4 Hours"}</li>`;
+ liTag += `<li class="${isToday}">${i}<br>${"Study for 4 Hours"}</li>`; //
  }
  for (let i = lastDayofMonth; i < 6; i++) { // creating li of next month first days
  liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;

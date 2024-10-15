@@ -75,7 +75,7 @@ header .current-date{
  cursor: default;
 }
 .calendar .days li{
-    color: red;
+   /* color: red; */
  z-index: 1;
  cursor: pointer;
  position: relative; 
