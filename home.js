@@ -7,10 +7,7 @@ function showCourses() {
     let comsciDropZone = document.getElementById("comsciDropZone");
     let courseContainer = document.getElementById("courseContainer");
     let days = document.getElementById("daysInput");
-    let submitButton = document.querySelector("#calendarSubmit button");
-
-    let unitOrderInput = document.getElementById("unitOrderInput"); // Hidden input for unit order
-    let daysValueInput = document.getElementById("daysValue"); // Hidden input for days
+    let submitButton = document.getElementById("calendarSubmit");
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -44,17 +41,28 @@ function showCourses() {
         }
     });
 
-    // Handle form submission and populate hidden fields
+    //Handle form submission and populate hidden fields
     submitButton.addEventListener("click", (e) => {
+        e.preventDefault();  // Prevent the default form submission
+    
+        // Get the selected course inside the click event handler
+        const selectedCourse = document.getElementById("courses").value;
+    
         // Get the unit order and store it in the hidden input
         let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone;
         updateUnitOrder(dropZone);
-        unitOrderInput.value = unitOrder;  // Store the array directly (as an array, not stringified)
-
+        console.log("Unit order at submission:", unitOrder);
+    
         // Get the number of days input
         let daysInputValue = document.getElementById("daysInputField").value;
-        daysValueInput.value = daysInputValue;  // Store the days in the hidden input
-        console.log(daysInputValue.value)
+        console.log("Number of days at submission:", daysInputValue);
+    
+        // Store in localStorage
+        localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
+        localStorage.setItem("days", daysInputValue);  // Store the days input
+    
+        // Redirect to the calendar.html page
+        window.location.href = `calendar.html`;
     });
 }
 
