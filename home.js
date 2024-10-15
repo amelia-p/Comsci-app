@@ -159,3 +159,4 @@ function calcHours (dropZone){
 
 // Call the function to add the event listener to the form
 showCourses();
+
