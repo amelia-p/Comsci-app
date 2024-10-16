@@ -3,7 +3,7 @@ const studyhours = document.querySelector(".days1"),
 currentDate = document.querySelector(".current-date"),
 prevNextIcon = document.querySelectorAll(".icons span");
 
-
+console.log(unitOrder);
 // getting new date, current year and month
 let date = new Date(),
 currYear = date.getFullYear(),

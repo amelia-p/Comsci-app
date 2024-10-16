@@ -154,11 +154,11 @@ function calcHours(){
     // Is this for amelia's function?
     
     ranks = [];
-    for (let i = 0; i < totalhours; i++) {
-        if (i > 0){ //greater than the most comfortable ranking
+    for (let i = 0; i < unitOrder.length; i++) {
+        //if (i > 0){ //greater than the most comfortable ranking
         ranks[i] = i; 
         totalranks += ranks[i]; //getting total numbers
-        }
+        //}
     }
     for (let i = 0; i < ranks.length; i++){
         props[i] = ranks[i]/totalranks * 1.0;
