@@ -50,14 +50,22 @@ function showCourses() {
         // Get the selected course inside the click event handler
         const selectedCourse = document.getElementById("courses").value;
     
+                // Get the number of days input
+        daysInputValue = document.getElementById("daysInputField").value;
+        console.log("Number of days at submission:", daysInputValue);
+
+        //(2000);
+
+        calcHours();
+        // console.log("let days = document.getElementById(daysInput):", days)
+        console.log("hours Per Unit array:", hoursPerUnit);
+
         // Get the unit order and store it in the hidden input
         let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone;
         updateUnitOrder(dropZone);
         console.log("Unit order at submission:", unitOrder);
     
-        // Get the number of days input
-        let daysInputValue = document.getElementById("daysInputField").value;
-        console.log("Number of days at submission:", daysInputValue);
+        
     
         // Store in localStorage
         localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
@@ -65,6 +73,7 @@ function showCourses() {
     
         // Redirect to the calendar.html page
         window.location.href = `calendar.html`;
+        console.log("Unit order at submission:", unitOrder);
     });
 }
 
