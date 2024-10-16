@@ -1,3 +1,5 @@
+let daysInputValue = document.getElementById("none");
+
 function showCourses() {
     let loginForm = document.getElementById("loginForm");
     let explanation = document.getElementById("courseExplain");
@@ -123,21 +125,24 @@ function loadStoredOrder(dropZone) {
     console.log(storedOrder);
 }
 
-calcHours;
+//calcHours();
 props = [];
 hoursPerUnit = [];
-var totalranks = 0;
-function calcHours (dropZone){
-    //(let days = daysInputValue){}
-    //if (newDate.getDay() == 0 || newDate.getDay() == 6) {
-        //totalhours = 0;
+let totalranks = 0;
+
+function calcHours(){
+    
+    //for (let i = 0; i < daysInputValue; i++){
+        let totalhours = daysInputValue;
     //}
+    // Is this for amelia's function?
+    
     ranks = [];
     for (let i = 0; i < unitOrder.length; i++) {
-        while (i > 0){
+        //if (i > 0){ //greater than the most comfortable ranking
         ranks[i] = i; 
         totalranks += ranks[i]; //getting total numbers
-        }
+        //}
     }
     for (let i = 0; i < ranks.length; i++){
         props[i] = ranks[i]/totalranks * 1.0;
