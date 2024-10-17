@@ -51,7 +51,7 @@ body {
     color: white;
   }
 
-.dropzone {
+.dropZone {
     width: 300px;
     display: flex;
     flex-direction: column; /* Arrange items vertically */
@@ -84,17 +84,14 @@ body {
     padding: 10px;
     width: 220px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #courseContainer {
     display: flex; /* Flexbox on the parent container to align units and drop zones horizontally */
     gap: 20px; /* Space between the units and the drop zone */
     padding: 20px;
-}
-
-#csUnits, #physicsUnits {
-    display: flex; /* Aligns the units horizontally */
-    flex-direction: column; /* Makes units appear in a vertical column */
 }
 
 #csUnits1, #csUnits2, #csUnits3, #csUnits4, #csUnits5, #csUnits6, #csUnits7, #csUnits8, #csUnits9, #csUnits10 {
@@ -108,3 +105,5 @@ body {
     padding: 10px;
     cursor: pointer;
 }
+
+
