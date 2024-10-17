@@ -5,14 +5,10 @@ function showCourses() {
     let explanation = document.getElementById("courseExplain");
     let physicsChoice = document.getElementById("physicsUnits");
     let comsciChoice = document.getElementById("csUnits");
-    let physicsDropZone = document.getElementById("physicsDropZone");
-    let comsciDropZone = document.getElementById("comsciDropZone");
+    let dropZone = document.querySelector(".dropZone");
     let courseContainer = document.getElementById("courseContainer");
     let days = document.getElementById("daysInput");
     let submitButton = document.getElementById("calendarSubmit");
-
-
-    
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -23,8 +19,7 @@ function showCourses() {
         explanation.style.display = "none";
         physicsChoice.style.display = "none";
         comsciChoice.style.display = "none";
-        physicsDropZone.style.display = "none";
-        comsciDropZone.style.display = "none";
+        dropZone.style.display = "none";
         courseContainer.style.display = "none";
         days.style.display = "none";
         submitButton.style.display = "none";
@@ -33,13 +28,13 @@ function showCourses() {
         courseContainer.style.display = "flex";
         if (selectedCourse === "physics") {
             physicsChoice.style.display = "flex";
-            physicsDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         } else if (selectedCourse === "comsci") {
             comsciChoice.style.display = "flex";
-            comsciDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
@@ -64,8 +59,8 @@ function showCourses() {
         console.log("hours Per Unit array:", hoursPerUnit);
 
         // Get the unit order and store it in the hidden input
-        let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone;
-        updateUnitOrder(dropZone);
+        let currentDropZone = selectedCourse === "physics" ? physicsChoice : comsciChoice;
+        updateUnitOrder(currentDropZone);
         console.log("Unit order at submission:", unitOrder);
     
         
@@ -74,13 +69,9 @@ function showCourses() {
         localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
         localStorage.setItem("days", daysInputValue);  // Store the days input
     
-        console.log("Unit order at submission:", unitOrder);
-
         // Redirect to the calendar.html page
-        //window.location.href = `calendar.html`;
-        
-
-        
+        window.location.href = `calendar.html`;
+        console.log("Unit order at submission:", unitOrder);
     });
 }
 
@@ -101,9 +92,9 @@ function drop(ev) {
     ev.preventDefault();
     
     // Ensure we are dropping inside a dropzone
-    if (ev.target.classList.contains('dropzone')) {
+    if (ev.target.classList.contains('dropZone')) {
         ev.target.appendChild(draggedElement);  // Append the dragged element to the new position
-    } else if (ev.target.parentElement.classList.contains('dropzone')) {
+    } else if (ev.target.parentElement.classList.contains('dropZone')) {
         ev.target.parentElement.insertBefore(draggedElement, ev.target);  // Insert above the target element
     }
 
@@ -111,8 +102,7 @@ function drop(ev) {
     draggedElement = null;
 
     // Update the order of units after the drop
-    updateUnitOrder(ev.target.closest('.dropzone'));
-    
+    updateUnitOrder(ev.target.closest('.dropZone'));
 }
 
 function updateUnitOrder(dropZone) {
