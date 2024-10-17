@@ -1,3 +1,5 @@
+let daysInputValue = document.getElementById("none");
+
 function showCourses() {
     let loginForm = document.getElementById("loginForm");
     let explanation = document.getElementById("courseExplain");
@@ -46,14 +48,22 @@ function showCourses() {
         // Get the selected course inside the click event handler
         const selectedCourse = document.getElementById("courses").value;
     
+                // Get the number of days input
+        daysInputValue = document.getElementById("daysInputField").value;
+        console.log("Number of days at submission:", daysInputValue);
+
+        //(2000);
+
+        calcHours();
+        // console.log("let days = document.getElementById(daysInput):", days)
+        console.log("hours Per Unit array:", hoursPerUnit);
+
         // Get the unit order and store it in the hidden input
         let currentDropZone = selectedCourse === "physics" ? physicsChoice : comsciChoice;
         updateUnitOrder(currentDropZone);
         console.log("Unit order at submission:", unitOrder);
     
-        // Get the number of days input
-        let daysInputValue = document.getElementById("daysInputField").value;
-        console.log("Number of days at submission:", daysInputValue);
+        
     
         // Store in localStorage
         localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
@@ -61,6 +71,7 @@ function showCourses() {
     
         // Redirect to the calendar.html page
         window.location.href = `calendar.html`;
+        console.log("Unit order at submission:", unitOrder);
     });
 }
 
@@ -101,21 +112,70 @@ function updateUnitOrder(dropZone) {
         unitOrder.push(elements[i].id); // Store the id of each unit in order
     }
     console.log("Updated unit order:", unitOrder);
+    //calcHours();
 }
 
 
+
 function loadStoredOrder(dropZone) {
-    const storedOrder = JSON.parse(localStorage.getItem("unitOrder"));
+    const storedOrder = JSON.parse(localStorage.getItem("unitOrder")); 
     if (storedOrder) {
         for (const unitId of storedOrder) {
-            let unitElement = document.getElementById(unitId);
+            let unitElement = document.getElementById(unitId); //storing each of the strings in the unitOrder
             if (unitElement) {
                 dropZone.appendChild(unitElement); // Recreate the order from storage
             }
         }
         unitOrder = storedOrder;
     }
+    console.log(storedOrder);
 }
+
+//calcHours();
+props = [];
+hoursPerUnit = [];
+let totalranks = 0;
+
+function calcHours(){
+    
+    //for (let i = 0; i < daysInputValue; i++){
+        let totalhours = daysInputValue;
+    //}
+    // Is this for amelia's function?
+    
+    ranks = [];
+    for (let i = 0; i < unitOrder.length; i++) {
+        //if (i > 0){ //greater than the most comfortable ranking
+        ranks[i] = i; 
+        totalranks += ranks[i]; //getting total numbers
+        //}
+    }
+    for (let i = 0; i < ranks.length; i++){
+        props[i] = ranks[i]/totalranks * 1.0;
+        hoursPerUnit[i] = totalhours * props[i];
+    }
+    console.log("totalranks", ranks);
+
+}
+
+
+// submitButton.addEventListener("click", (e) => {
+//     // Get the selected drop zone (physics or comsci) and update the unit order
+//     let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone;
+//     updateUnitOrder(dropZone);  // Update the unit order array
+
+//     // Log the current unit order when the submit button is pressed
+//     console.log("Unit order at submission:", unitOrder);
+
+//     // Get the number of days input
+// let daysInputValue = document.getElementById("daysInputField").value;
+// daysValueInput.value = daysInputValue;  // Store the days in the hidden input
+
+//      // Log the number of days when the submit button is pressed
+// console.log("Number of days at submission:", daysInputValue);
+//  });
+// // 
 
 // Call the function to add the event listener to the form
 showCourses();
+
