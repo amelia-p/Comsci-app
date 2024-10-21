@@ -144,6 +144,8 @@ header .icons span:hover {
 }
 
 .days li.active::before {
+  position: absolute;
   width: 10vw;
+  height: 2vw;
   background: #9b59b6;
 }
