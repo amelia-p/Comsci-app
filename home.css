@@ -94,11 +94,14 @@ body {
     padding: 20px;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0d6a2d3285fbce80876e7868b8b31379b41901d2
 #csUnits, #physicsUnits, #physics2Units, #physics3Units, #bioUnits, #aaUnits, #calcABUnits, #calcBCUnits, #chemUnits, #chineseUnits, #compGovPolUnits, #csPrinciplesUnits, #litUnits, #apesUnits, #euroUnits, #frenchUnits, #germanUnits, #hugUnits, #italianUnits, #japaneseUnits, #latinUnits, #macroEconUnits, #microEconUnits, #musicTheoryUnits, #physics3aUnits, #precalcUnits, #psychUnits, #spanishUnits, #statsUnits, #usgovUnits, #apushUnits, #worldUnits {
     display: flex; /* Aligns the units horizontally */
     flex-direction: column; /* Makes units appear in a vertical column */
 }
-
 #csUnits1, #csUnits2, #csUnits3, #csUnits4, #csUnits5, #csUnits6, #csUnits7, #csUnits8, #csUnits9, #csUnits10 {
     background-color: lightblue;
     padding: 10px;

@@ -73,6 +73,8 @@ function showCourses() {
     let worldDropZone = document.getElementById("worldDropZone");
 
 
+
+    let dropZone = document.querySelector(".dropZone");
     let courseContainer = document.getElementById("courseContainer");
     let days = document.getElementById("daysInput");
     let submitButton = document.getElementById("calendarSubmit");
@@ -156,6 +158,8 @@ function showCourses() {
         worldDropZone.style.display = "none";
 
 
+
+        dropZone.style.display = "none";
         courseContainer.style.display = "none";
         days.style.display = "none";
         submitButton.style.display = "none";
@@ -413,7 +417,10 @@ function showCourses() {
         console.log("hours Per Unit array:", hoursPerUnit);
 
         // Get the unit order and store it in the hidden input
-    
+
+        let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone ; physics2DropZone ; physics3DropZone;
+        updateUnitOrder(dropZone);
+
         let currentDropZone = selectedCourse === "physics" ? physicsChoice : comsciChoice;
         updateUnitOrder(currentDropZone);
         console.log("Unit order at submission:", unitOrder);
@@ -552,4 +559,3 @@ function assignStudyHours(){
 
 // Call the function to add the event listener to the form
 showCourses();
-
