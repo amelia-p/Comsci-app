@@ -46,10 +46,10 @@ body {
     cursor: pointer;
   }
 
-  .button:hover {
+.button:hover {
     background-color: black; 
     color: white;
-  }
+}
 
 .dropZone {
     width: 300px;
@@ -80,7 +80,7 @@ body {
 }
 
 
-#csUnits, #physicsUnits {
+#csUnits, #physicsUnits, #physics2Units, #physics3Units, #bioUnits, #aaUnits, #calcABUnits, #calcBCUnits, #chemUnits, #chineseUnits, #compGovPolUnits, #csPrinciplesUnits, #litUnits, #apesUnits, #euroUnits, #frenchUnits, #germanUnits, #hugUnits, #italianUnits, #japaneseUnits, #latinUnits, #macroEconUnits, #microEconUnits, #musicTheoryUnits, #physics3aUnits, #precalcUnits, #psychUnits, #spanishUnits, #statsUnits, #usgovUnits, #apushUnits, #worldUnits {
     padding: 10px;
     width: 220px;
     position: relative;
@@ -94,6 +94,11 @@ body {
     padding: 20px;
 }
 
+
+#csUnits, #physicsUnits, #physics2Units, #physics3Units, #bioUnits, #aaUnits, #calcABUnits, #calcBCUnits, #chemUnits, #chineseUnits, #compGovPolUnits, #csPrinciplesUnits, #litUnits, #apesUnits, #euroUnits, #frenchUnits, #germanUnits, #hugUnits, #italianUnits, #japaneseUnits, #latinUnits, #macroEconUnits, #microEconUnits, #musicTheoryUnits, #physics3aUnits, #precalcUnits, #psychUnits, #spanishUnits, #statsUnits, #usgovUnits, #apushUnits, #worldUnits {
+    display: flex; /* Aligns the units horizontally */
+    flex-direction: column; /* Makes units appear in a vertical column */
+}
 #csUnits1, #csUnits2, #csUnits3, #csUnits4, #csUnits5, #csUnits6, #csUnits7, #csUnits8, #csUnits9, #csUnits10 {
     background-color: lightblue;
     padding: 10px;
@@ -102,6 +107,164 @@ body {
 
 #physicsUnits1, #physicsUnits2, #physicsUnits3, #physicsUnits4, #physicsUnits5, #physicsUnits6, #physicsUnits7, #physicsUnits8 {
     background-color: lightgreen;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#physics2Unit9, #physics2Unit10, #physics2Unit11, #physics2Unit12, #physics2Unit13, #physics2Unit14, #physics2Unit15 {
+    background-color: rgb(247, 238, 115);
+    padding: 10px;
+    cursor: pointer;
+}
+#physics3Unit1, #physics3Unit2, #physics3Unit3, #physics3Unit4, #physics3Unit5, #physics3Unit6, #physics3Unit7 {
+    background-color: rgb(255, 166, 58);
+    padding: 10px;
+    cursor: pointer;
+}
+
+#bioUnit1, #bioUnit2, #bioUnit3, #bioUnit4, #bioUnit5, #bioUnit6, #bioUnit7, #bioUnit8 {
+    background-color: rgb(255, 125, 110);
+    padding: 10px;
+    cursor: pointer;
+}
+
+#artHistoryUnit1, #artHistoryUnit2, #artHistoryUnit3, #artHistoryUnit4, #artHistoryUnit5, #artHistoryUnit6, #artHistoryUnit7, #artHistoryUnit8, #artHistoryUnit9, #artHistoryUnit10 {
+    background-color: rgb(110, 170, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#aaUnit1, #aaUnit2, #aaUnit3, #aaUnit4 {
+    background-color: rgb(255, 70, 70);
+    padding: 10px;
+    cursor: pointer;
+}
+#calcABUnit1, #calcABUnit2, #calcABUnit3, #calcABUnit4, #calcABUnit5, #calcABUnit6, #calcABUnit7, #calcABUnit8 {
+    background-color: rgb(80, 74, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#calcBCUnit1, #calcBCUnit2, #calcBCUnit3, #calcBCUnit4, #calcBCUnit5, #calcBCUnit6, #calcBCUnit7, #calcBCUnit8, #calcBCUnit9, #calcBCUnit10 {
+    background-color: rgb(183, 76, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#chemUnit1, #chemUnit2, #chemUnit3, #chemUnit4, #chemUnit5, #chemUnit6, #chemUnit7, #chemUnit8, #chemUnit9 {
+    background-color: rgb(237, 167, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#chineseUnit1, #chineseUnit2, #chineseUnit3, #chineseUnit4, #chineseUnit5, #chineseUnit6 {
+    background-color: rgb(255, 129, 192);
+    padding: 10px;
+    cursor: pointer;
+}
+#compGovUnit1, #compGovUnit2, #compGovUnit3, #compGovUnit4, #compGovUnit5 {
+    background-color: rgb(255, 58, 127);
+    padding: 10px;
+    cursor: pointer;
+}
+#csprinUnit1, #csprinUnit2, #csprinUnit3, #Ucsprinnit4, #csprinUnit5 {
+    background-color: rgb(200, 107, 107);
+    padding: 10px;
+    cursor: pointer;
+}
+#litUnit1, #litUnit2, #litUnit3 {
+    background-color: rgb(209, 159, 110);
+    padding: 10px;
+    cursor: pointer;
+}
+#apesUnit1, #apesUnit2, #apesUnit3, #apesUnit4, #apesUnit5, #apesUnit6, #apesUnit7, #apesUnit8 {
+    background-color: rgb(217, 227, 126);
+    padding: 10px;
+    cursor: pointer;
+}
+#euroUnit1, #euroUnit2, #euroUnit3, #euroUnit4, #euroUnit5, #euroUnit6, #euroUnit7, #euroUnit8 {
+    background-color: rgb(86, 122, 67);
+    padding: 10px;
+    cursor: pointer;
+}
+#frenchUnit1, #frenchUnit2, #frenchUnit3, #frenchUnit4, #frenchUnit5, #frenchUnit6 {
+    background-color: rgb(110, 255, 224);
+    padding: 10px;
+    cursor: pointer;
+}
+#germanUnit1, #germanUnit2, #germanUnit3, #germanUnit4, #germanUnit5, #germanUnit6 {
+    background-color: rgb(48, 207, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#hugUnit1, #hugUnit2, #hugUnit3, #hugUnit4, #hugUnit5, #hugUnit6, #hugUnit7 {
+    background-color: rgb(82, 125, 190);
+    padding: 10px;
+    cursor: pointer;
+}
+#italianUnit1, #italianUnit2, #italianUnit3, #italianUnit4, #italianUnit5, #italianUnit6 {
+    background-color: rgb(132, 97, 184);
+    padding: 10px;
+    cursor: pointer;
+}
+#japaneseUnit1, #japaneseUnit2, #japaneseUnit3, #japaneseUnit4, #japaneseUnit5, #japaneseUnit6 {
+    background-color: rgb(214, 139, 205);
+    padding: 10px;
+    cursor: pointer;
+}
+#latinUnit1, #latinUnit2, #latinUnit3, #latinUnit4, #latinUnit5, #latinUnit6, #latinUnit7, #latinUnit8 {
+    background-color: rgb(200, 104, 136);
+    padding: 10px;
+    cursor: pointer;
+}
+#macroEconUnit1, #macroEconUnit2, #macroEconUnit3, #macroEconUnit4, #macroEconUnit5, #macroEconUnit6 {
+    background-color: rgb(234, 160, 0);
+    padding: 10px;
+    cursor: pointer;
+}
+#microEconUnit1, #microEconUnit2, #microEconUnit3, #microEconUnit4, #microEconUnit5, #microEconUnit6 {
+    background-color: rgb(167, 183, 0);
+    padding: 10px;
+    cursor: pointer;
+}
+#mTUnit1, #mTUnit2, #mTUnit3, #mTUnit4, #mTUnit5, #mTUnit6, #mTUnit7, #mTUnit8 {
+    background-color: rgb(210, 255, 184);
+    padding: 10px;
+    cursor: pointer;
+}
+#physics3aUnit1, #physics3aUnit2, #physics3aUnit3, #physics3aUnit4, #physics3aUnit5, #physics3aUnit6 {
+    background-color: rgb(122, 136, 255);
+    padding: 10px;
+    cursor: pointer;
+}
+#precalcUnit1, #precalcUnit2, #precalcUnit3, #precalcUnit4 {
+    background-color: rgb(51, 38, 169);
+    padding: 10px;
+    cursor: pointer;
+}
+#psychUnit1, #psychUnit2, #psychUnit3, #psychUnit4, #psychUnit5 {
+    background-color: rgb(83, 0, 134);
+    padding: 10px;
+    cursor: pointer;
+}
+#spanishUnit1, #spanishUnit2, #spanishUnit3, #spanishUnit4, #spanishUnit5, #spanishUnit6 {
+    background-color: rgb(161, 82, 73);
+    padding: 10px;
+    cursor: pointer;
+}
+#statsUnit1, #statsUnit2, #statsUnit3, #statsUnit4, #statsUnit5, #statsUnit6, #statsUnit7, #statsUnit8, #statsUnit9 {
+    background-color: rgb(165, 55, 103);
+    padding: 10px;
+    cursor: pointer;
+}
+#usgovUnit1, #usgovUnit2, #usgovUnit3, #usgovUnit4, #usgovUnit5 {
+    background-color: rgb(139, 133, 171);
+    padding: 10px;
+    cursor: pointer;
+}
+#apushUnit1, #Unit2, #apushUnit3, #apushUnit4, #apushUnit5, #apushUnit6, #apushUnit7, #apushUnit8, #apushUnit9 {
+    background-color: rgb(176, 152, 47);
+    padding: 10px;
+    cursor: pointer;
+}
+#worldUnit1, #worldUnit2, #worldUnit3, #worldUnit4, #worldUnit5, #worldUnit6, #worldUnit7, #worldUnit8, #worldUnit9 {
+    background-color: rgb(54, 158, 157);
     padding: 10px;
     cursor: pointer;
 }
