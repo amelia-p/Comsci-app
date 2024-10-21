@@ -51,7 +51,7 @@ body {
     color: white;
 }
 
-.dropzone {
+.dropZone {
     width: 300px;
     display: flex;
     flex-direction: column; /* Arrange items vertically */
@@ -84,6 +84,8 @@ body {
     padding: 10px;
     width: 220px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 #courseContainer {

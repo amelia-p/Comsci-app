@@ -164,14 +164,14 @@ function showCourses() {
         courseContainer.style.display = "flex";
         if (selectedCourse === "physics") {
             physicsChoice.style.display = "flex";
-            physicsDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         } 
         else if (selectedCourse === "comsci") {
             comsciChoice.style.display = "flex";
-            comsciDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
@@ -413,8 +413,9 @@ function showCourses() {
         console.log("hours Per Unit array:", hoursPerUnit);
 
         // Get the unit order and store it in the hidden input
-        let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone ; physics2DropZone ; physics3DropZone;
-        updateUnitOrder(dropZone);
+    
+        let currentDropZone = selectedCourse === "physics" ? physicsChoice : comsciChoice;
+        updateUnitOrder(currentDropZone);
         console.log("Unit order at submission:", unitOrder);
     
         
@@ -446,9 +447,9 @@ function drop(ev) {
     ev.preventDefault();
     
     // Ensure we are dropping inside a dropzone
-    if (ev.target.classList.contains('dropzone')) {
+    if (ev.target.classList.contains('dropZone')) {
         ev.target.appendChild(draggedElement);  // Append the dragged element to the new position
-    } else if (ev.target.parentElement.classList.contains('dropzone')) {
+    } else if (ev.target.parentElement.classList.contains('dropZone')) {
         ev.target.parentElement.insertBefore(draggedElement, ev.target);  // Insert above the target element
     }
 
@@ -456,8 +457,7 @@ function drop(ev) {
     draggedElement = null;
 
     // Update the order of units after the drop
-    updateUnitOrder(ev.target.closest('.dropzone'));
-    
+    updateUnitOrder(ev.target.closest('.dropZone'));
 }
 
 function updateUnitOrder(dropZone) {
