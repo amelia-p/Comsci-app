@@ -18,19 +18,8 @@
         <div id="header">Your Study Calendar</div>
         <div id="unitOrderDisplay"></div>
         <div id="daysDisplay"></div>
-        <p class="current-date"></p>
+        <p id="current-date"></p>
 
-    <script>
-
-        // Clear the data from localStorage (optional)
-        localStorage.removeItem('unitOrder');
-        localStorage.removeItem('days');
-
-
-        document.getElementById("current-date").innerHTML = new Date().getDate();
-        //getDay() returns the day of the week as a number (0-6)
-        //getDate() returns the day of the month as a number (1-31)
-    </script>
         <div class="icons">
           <span id="prev" class="material-symbols-rounded">chevron_left</span>
           <span id="next" class="material-symbols-rounded">chevron_right</span>
