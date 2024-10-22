@@ -38,42 +38,6 @@ function showCourses() {
     let apushChoice = document.getElementById("apushUnits");
     let worldChoice = document.getElementById("worldUnits");
 
-    let physicsDropZone = document.getElementById("physicsDropZone");
-    let comsciDropZone = document.getElementById("comsciDropZone");
-    let physics2DropZone = document.getElementById("physics2DropZone");
-    let physics3DropZone = document.getElementById("physics3DropZone");
-    let bioDropZone = document.getElementById("bioDropZone")
-    let aaDropZone = document.getElementById("aaDropZone");
-    let artHistoryDropZone = document.getElementById("artHistoryDropZone");
-    let calcABDropZone = document.getElementById("calcABDropZone");
-    let calcBCDropZone = document.getElementById("calcBCDropZone");
-    let chemDropZone = document.getElementById("chemDropZone");
-    let chineseDropZone = document.getElementById("chineseDropZone");
-    let compGovPolDropZone = document.getElementById("compGovPolDropZone");
-    let csprDropZone = document.getElementById("csprDropZone");
-    let litDropZone = document.getElementById("litDropZone");
-    let apesDropZone = document.getElementById("apesDropZone");
-    let euroDropZone = document.getElementById("euroDropZone");
-    let frenchDropZone = document.getElementById("frenchDropZone");
-    let germanDropZone = document.getElementById("germanDropZone");
-    let hugDropZone = document.getElementById("hugDropZone");
-    let italianDropZone = document.getElementById("italianDropZone");
-    let japaneseDropZone = document.getElementById("japaneseDropZone");
-    let latinDropZone = document.getElementById("latinDropZone");
-    let macroEconDropZone = document.getElementById("macroEconDropZone");
-    let microEconDropZone = document.getElementById("microEconDropZone");
-    let musicTheoryDropZone = document.getElementById("musicTheoryDropZone");
-    let physics3aDropZone = document.getElementById("physics3aDropZone");
-    let precalcDropZone = document.getElementById("precalcDropZone");
-    let psychDropZone = document.getElementById("psychDropZone");
-    let spanishDropZone = document.getElementById("spanishDropZone");
-    let statsDropZone = document.getElementById("statsDropZone");
-    let usgovDropZone = document.getElementById("usgovDropZone");
-    let apushDropZone = document.getElementById("apushDropZone");
-    let worldDropZone = document.getElementById("worldDropZone");
-
-
-
     let dropZone = document.querySelector(".dropZone");
     let courseContainer = document.getElementById("courseContainer");
     let days = document.getElementById("daysInput");
@@ -122,43 +86,6 @@ function showCourses() {
         apushChoice.style.display = "none";
         worldChoice.style.display = "none";
 
-
-        physicsDropZone.style.display = "none";
-        comsciDropZone.style.display = "none";
-        physics2DropZone.style.display = "none";
-        physics3DropZone.style.display = "none";
-        bioDropZone.style.display = "none";
-        aaDropZone.style.display = "none";
-        artHistoryDropZone.style.display = "none";
-        calcABDropZone.style.display = "none";
-        calcBCDropZone.style.display = "none";
-        chemDropZone.style.display = "none";
-        chineseDropZone.style.display = "none";
-        compGovPolDropZone.style.display = "none";
-        csprDropZone.style.display = "none";
-        litDropZone.style.display = "none";
-        apesDropZone.style.display = "none";
-        euroDropZone.style.display = "none";
-        frenchDropZone.style.display = "none";
-        germanDropZone.style.display = "none";
-        hugDropZone.style.display = "none";
-        italianDropZone.style.display = "none";
-        japaneseDropZone.style.display = "none";
-        latinDropZone.style.display = "none";
-        macroEconDropZone.style.display = "none";
-        microEconDropZone.style.display = "none";
-        musicTheoryDropZone.style.display = "none";
-        physics3aDropZone.style.display = "none";
-        precalcDropZone .style.display = "none";
-        psychDropZone.style.display = "none";
-        spanishDropZone.style.display = "none";
-        statsDropZone.style.display = "none";
-        usgovDropZone.style.display = "none";
-        apushDropZone.style.display = "none";
-        worldDropZone.style.display = "none";
-
-
-
         dropZone.style.display = "none";
         courseContainer.style.display = "none";
         days.style.display = "none";
@@ -182,217 +109,217 @@ function showCourses() {
         }
         else if (selectedCourse === "physics2"){
             physics2Choice.style.display = "flex";
-            physics2DropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "physics3"){
             physics3Choice.style.display = "flex";
-            physics3DropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "physics3a"){
             physics3aChoice.style.display = "flex";
-            physics3aDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "biology"){
             bioChoice.style.display = "flex";
-            bioDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "aa"){
             aaChoice.style.display = "flex";
-            aaDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "artHistory"){
             artHistoryChoice.style.display = "flex";
-            artHistoryDropZone.style.display = "flex";
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "calcAB"){
             calcABChoice.style.display = "flex";
-            calcABDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "calcBC"){
             calcBCChoice.style.display = "flex";
-            calcBCDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "chemistry"){
             chemChoice.style.display = "flex";
-            chemDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "chinese"){
             chineseChoice.style.display = "flex";
-            chineseDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "compGovPol"){
             compGovPolChoice.style.display = "flex";
-            compGovPolDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "comsciPrinciples"){
             csprChoice.style.display = "flex";
-            csprDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "lit"){
             litChoice.style.display = "flex";
-            litDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "apes"){
             apesChoice.style.display = "flex";
-            apesDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "euro"){
             euroChoice.style.display = "flex";
-            euroDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "french"){
             frenchChoice.style.display = "flex";
-            frenchDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "german"){
             germanChoice.style.display = "flex";
-            germanDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "hug"){
             hugChoice.style.display = "flex";
-            hugDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "italian"){
             italianChoice.style.display = "flex";
-            italianDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "japanese"){
             japaneseChoice.style.display = "flex";
-            japaneseDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "latin"){
             latinChoice.style.display = "flex";
-            latinDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "macroEcon"){
             macroEconChoice.style.display = "flex";
-            macroEconDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "microEcon"){
             microEconChoice.style.display = "flex";
-            microEconDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "musicTheory"){
             musicTheoryChoice.style.display = "flex";
-            musicTheoryDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "precalc"){
             precalcChoice.style.display = "flex";
-            precalcDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "psych"){
             psychChoice.style.display = "flex";
-            psychDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "spanish"){
             spanishChoice.style.display = "flex";
-            spanishDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "stats"){
             statsChoice.style.display = "flex";
-            statsDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "usgov"){
             usgovChoice.style.display = "flex";
-            usgovDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "apush"){
             apushChoice.style.display = "flex";
-            apushDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
         }
         else if (selectedCourse === "world"){
             worldChoice.style.display = "flex";
-            worldDropZone.style.display = "flex"
+            dropZone.style.display = "flex";
             submitButton.style.display = "block";
             days.style.display = "block";
             explanation.style.display = "block";
@@ -418,14 +345,7 @@ function showCourses() {
 
         // Get the unit order and store it in the hidden input
 
-        let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone ; physics2DropZone ; physics3DropZone;
-        updateUnitOrder(dropZone);
-
-        let currentDropZone = selectedCourse === "physics" ? physicsChoice : comsciChoice;
-        updateUnitOrder(currentDropZone);
-        console.log("Unit order at submission:", unitOrder);
-    
-        
+        let dropZone = document.querySelector(".dropZone");
     
         // Store in localStorage
         localStorage.setItem("unitOrder", JSON.stringify(unitOrder));  // Store the unit order as a string
@@ -538,24 +458,6 @@ function assignStudyHours(){
     }
     console.log("message", message);
 }
-
-
-// submitButton.addEventListener("click", (e) => {
-//     // Get the selected drop zone (physics or comsci) and update the unit order
-//     let dropZone = selectedCourse === "physics" ? physicsDropZone : comsciDropZone;
-//     updateUnitOrder(dropZone);  // Update the unit order array
-
-//     // Log the current unit order when the submit button is pressed
-//     console.log("Unit order at submission:", unitOrder);
-
-//     // Get the number of days input
-// let daysInputValue = document.getElementById("daysInputField").value;
-// daysValueInput.value = daysInputValue;  // Store the days in the hidden input
-
-//      // Log the number of days when the submit button is pressed
-// console.log("Number of days at submission:", daysInputValue);
-//  });
-// // 
 
 // Call the function to add the event listener to the form
 showCourses();
