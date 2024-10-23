@@ -1,5 +1,3 @@
-/* Import Google font - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;400;600&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -30,23 +28,28 @@ body {
 
 #header-content {
   display: flex;
-  justify-content: space-between; /* Space out the header, date, and arrows */
-  align-items: center;
-  width: 100%; /* Full width to match the calendar */
-  padding-bottom: 20px; /* Add space below the header */
-  border-bottom: 1px solid #ccc; /* Add a separator line between header and calendar */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align all elements */
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
 }
 
 #header {
+  font-family: "Inter";
+  font-weight: 500;
   font-size: 40px;
   text-align: center;
   flex-grow: 1; /* Allow the header text to grow and fill the space */
 }
 
-.current-date {
-  font-size: 1.45rem;
-  font-weight: 500;
+#current-date {
+  font-size: 1.3rem;
+  font-weight: 400;
   text-align: center;
+  margin-top: 10px; 
+  margin-bottom: 10px;
+  font-family: "Inter";
 }
 
 header .icons {
@@ -104,7 +107,7 @@ header .icons span:hover {
 }
 
 .calendar .days li {
-  color: darkred;
+  color: #000000;
   z-index: 1;
   cursor: pointer;
   position: relative;
@@ -144,8 +147,7 @@ header .icons span:hover {
 }
 
 .days li.active::before {
-  position: absolute;
-  width: 10vw;
-  height: 2vw;
-  background: #9b59b6;
+  width: 11vw;
+  height: 5vw;
+  background: #3c5b8b;
 }
