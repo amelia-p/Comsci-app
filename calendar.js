@@ -40,48 +40,49 @@ if (totalUnits === 1) {
 let date = new Date(),
     currYear = date.getFullYear(),
     currMonth = date.getMonth();
+    currDate = date.getDate(); 
 
 // storing full name of all months in array
 const months = ["January", "February", "March", "April", "May", "June", "July",
     "August", "September", "October", "November", "December"];
 
 const renderCalendar = () => {
-    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // getting first day of month
-        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // getting last date of month
-        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // getting last day of month
-        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // getting last date of previous month
+    let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(), // First day of current month
+        lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(), // Last date of current month
+        lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(), // Last day of current month
+        lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate(); // Last date of previous month
 
     let liTag = "";
-    let studyTag = "";
 
-    // Creating inactive days of previous month
+    // Creating inactive days of the previous month
     for (let i = firstDayofMonth; i > 0; i--) {
         liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
     }
 
     // Looping over current month's days
+    let studyDayCount = 0; // Counter for study days
     for (let i = 1; i <= lastDateofMonth; i++) {
-        let isToday = i === date.getDate() && currMonth === new Date().getMonth()
-            && currYear === new Date().getFullYear() ? "active" : "";
+        let isToday = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : "";
 
-        // Check if this day falls within the study period
-        if (i <= days) {
+        // Only start counting study days from the current date
+        if (i >= currDate && studyDayCount < days) {
             // Determine which unit to study based on the day
-            let currentUnitIndex = (i - 1) % totalUnits; // Cycle through unitOrder
+            let currentUnitIndex = studyDayCount % totalUnits; // Cycle through unitOrder
             let currentUnit = unitOrder[currentUnitIndex]; // Get the current unit
             let currentUnitHours = hoursPerUnit[currentUnitIndex]; // Get the study hours for this unit
 
             // Create study message for this day
-            studyTag = `Study ${currentUnit} for ${currentUnitHours.toFixed(1)} hours`;
+            let studyTag = `Study ${currentUnit} for ${currentUnitHours} hours`;
 
             // Create the list item (li) for the day
             liTag += `<li class="${isToday}">${i}<br>${studyTag}</li>`;
+            studyDayCount++; // Increment study day count
         } else {
             liTag += `<li class="${isToday}">${i}</li>`; // No study message if outside the study days
         }
     }
 
-    // Creating inactive days of next month
+    // Creating inactive days of the next month
     for (let i = lastDayofMonth; i < 6; i++) {
         liTag += `<li class="inactive">${i - lastDayofMonth + 1}</li>`;
     }
@@ -89,6 +90,7 @@ const renderCalendar = () => {
     currentDate.innerText = `${months[currMonth]} ${currYear}`; // Display current month and year
     daysTag.innerHTML = liTag; // Add the list items to the days container
 }
+    
 
 renderCalendar();
 
